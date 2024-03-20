@@ -9,6 +9,7 @@ st.set_page_config(layout="wide")
 ### 
 st.title("125C Operation Investigation of Exit Criteria")
 st.header("Inspect the differential between SHT40 and RH sensors to determine if this is a valid DGO exit criteria")
+st.write("D1: 3/6/24, D2: 3/7/24, D3:3/8, D4: 3/11, D5: 3/14, D6: 3/15, D7: 3/18")
 ###
 
 
@@ -156,7 +157,7 @@ fig_rh.add_trace(go.Scatter(x=met_rh[0], y=met_rh[1], name="RH Delta Crossings",
 fig_rh.update_layout(title="RH Differential", xaxis_title="Time [min]", yaxis_title="Exhaust - Intake",
                      height=500, width=800)
 
-cols = st.columns([3,1])
+cols = st.columns([5,2])
 with cols[0]:
     st.plotly_chart(fig_sht)
 with cols[1]:
